@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background-color: #3a606e;
+  height: 100vh;
+}
+body,
+#root,
+#avatars,
+.avatar,
+.cross,
+.newAvatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root {
+  margin: 3rem auto;
+  width: 60%;
+  height: 300px;
+  background-color: #e0e0e0;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 6px 4px 9px 4px rgba(0, 0, 0, 0.4);
+}
+#avatars {
+  gap: 1rem;
+}
+.avatar,
+.newAvatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+}
+.cross {
+  position: absolute;
+  right: -3px;
+  top: -1px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #000;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 300ms;
+}
+.cross:hover {
+  background-color: #000;
+  color: #fff;
+}
+.newAvatar {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+.overlay {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.overlay .popup {
+  background-color: #fff;
+  z-index: 3;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.overlay .addUserPopup {
+  width: 300px;
+  height: 200px;
+}
+.overlay .deleteUserPopup {
+  width: 300px;
+  height: 100px;
+}
+.overlay .addUserPopup .cross {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  border: 1px solid;
+  top: -13px;
+  right: -13px;
+}
+.addUserPopup header,
+.addUserPopup footer,
+.deleteUserPopup footer {
+  background-color: #e0e0e0;
+  position: fixed;
+  width: 100%;
+  height: 46px;
+  padding: 5px;
+}
+.addUserPopup header {
+  top: 0;
+  text-align: center;
+}
+.addUserPopup footer, .deleteUserPopup footer {
+  bottom: 0;
+  text-align: right;
+}
+.addUserPopup footer button,
+.deleteUserPopup footer button {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 300ms;
+}
+.addUserPopup footer button:hover,
+.deleteUserPopup footer button:hover {
+  transform: scale(1.1);
+}
+.addUserPopup footer button:first-of-type,
+.deleteUserPopup footer button:first-of-type {
+  background-color: #c1121f;
+  color: #fff;
+}
+.addUserPopup footer button:last-of-type,
+.deleteUserPopup footer button:last-of-type {
+  background-color: #588157;
+  color: #fff;
+}
+.addUserPopup main {
+  height: calc(100% - 92px);
+  margin-top: 46px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addUserPopup main label {
+  font-size: 14px;
+  margin-right: 0.5rem;
+}

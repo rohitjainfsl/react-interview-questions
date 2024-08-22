@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.controls {
+  position: absolute;
+  display: flex;
+  gap: 1rem;
+  z-index: 99;
+}
+.screen {
+  height: 100vh;
+  position: relative;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+button:disabled {
+  pointer-events: none;
+}
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  animation: taDa 200ms ease-in-out;
+}
+@keyframes taDa {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
